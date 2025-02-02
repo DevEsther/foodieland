@@ -371,7 +371,7 @@
     </style>
 
 
-<header class="header">
+<!-- <header class="header">
     <div class="logo">Foodieland</div>
     <ul class="nav-links">
         <li><a href="./index.html">Home</a></li>
@@ -385,7 +385,70 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
     </div>
+</header> -->
+
+
+<header class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background-color: #fff; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+    <!-- Logo -->
+    <div class="logo" style="font-size: 24px; font-weight: bold;">Foodieland</div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-menu" style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; transition: all 0.3s ease-in-out;">
+        <li style="display: inline;"><a href="#" style="text-decoration: none; color: black;">Home</a></li>
+        <li style="display: inline;"><a href="#" style="text-decoration: none; color: black;">Recipes</a></li>
+        <li style="display: inline;"><a href="#" style="text-decoration: none; color: black;">Blog</a></li>
+        <li style="display: inline;"><a href="./contactus.html" style="text-decoration: none; color: black;">Contact</a></li>
+        <li style="display: inline;"><a href="./aboutus.html" style="text-decoration: none; color: black;">About Us</a></li>
+    </ul>
+
+    <!-- Social Icons -->
+    <div class="social-icons" style="display: flex; gap: 15px;">
+        <a href="#" style="text-decoration: none; color: black;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="text-decoration: none; color: black;"><i class="fab fa-twitter"></i></a>
+        <a href="#" style="text-decoration: none; color: black;"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Toggle Button (Hamburger Icon) -->
+    <div class="menu-toggle" onclick="toggleMenu()" style="display: none; font-size: 24px; cursor: pointer;">
+        &#9776;
+    </div>
 </header>
+
+<!-- Responsive Styles -->
+<style>
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block !important; /* Show hamburger menu */
+        }
+
+        .nav-links {
+            display: none !important; /* Hide nav links initially */
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: right;
+        }
+
+        .nav-links.show {
+            display: flex !important; /* Show nav links when toggled */
+        }
+    }
+</style>
+
+<!-- Toggle Script -->
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("nav-menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
     
 
 <section style="max-width: 1200px; margin: auto; padding: 40px;">
