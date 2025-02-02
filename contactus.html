@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodieland | contactus</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+            flex: 1;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links li {
+            display: inline;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            flex: 1;
+            justify-content: flex-end;
+        }
+        
+        .social-icons a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+
+        .image-container {
+    width: 100%;
+    height: auto;
+    margin-top: 80px; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+        .image-container img {
+            max-width: 100%; 
+            height: auto; 
+        }
+
+   
+        @media (max-width: 1024px) {
+            .header {
+                padding: 10px 5%;
+            }
+            .logo {
+                font-size: 20px;
+            }
+            .nav-links a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px 2%;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                margin: 10px 0;
+            }
+            .social-icons {
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .image-container {
+        margin-top: 250px; 
+    }
+
+        }
+        
+      
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px 1%;
+            }
+            .nav-links a {
+                font-size: 14px;
+            }
+            .social-icons a {
+                font-size: 18px;
+            }
+            .image-container {
+                margin-top: 220px; 
+            }
+        }
+
+        section {
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+        section div {
+            flex-direction: column;
+            text-align: center;
+        }
+        img {
+            width: 90% !important; 
+            max-width: 350px !important;
+            margin-top: 150px !important; 
+        }
+        form {
+            width: 100% !important; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            margin-top: 290px !important; 
+            font-size: 28px;
+        }
+    }
+
+
+.subscribe-box {
+    background-color: rgb(172, 223, 244);
+    width: 100vw;
+    padding: 40px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+}
+
+.subscribe-box h1,
+.subscribe-box p {
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.content img {
+    max-width: 200px;
+    height: auto;
+}
+
+
+.input-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-box input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.input-box button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-box {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .input-box input {
+        width: 90%;
+    }
+}
+
+
+.recipe-section {
+            text-align: center; 
+        }
+
+        .recipe-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .recipe-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .recipe-section div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .recipe-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            width: 30%;
+        }
+        @media (max-width: 768px) {
+            .recipe-section img {
+                width: 45%; 
+            }
+        }
+
+        
+        @media (max-width: 480px) {
+            .recipe-section img {
+                width: 80%; 
+            }
+        }
+
+
+        .content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+    }
+
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 15px; 
+        margin: 0;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: black; 
+        font-size: 16px; 
+        transition: color 0.3s ease; 
+    }
+
+    .menu li a:hover {
+        color: #f44336; 
+    }
+
+
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            text-align: center; 
+        }
+
+        .menu {
+            display: block;
+            text-align: center; 
+        }
+
+        .menu li {
+            margin-bottom: 10px; 
+        }
+    }
+
+     footer {
+        padding: 20px;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    .social-iconss {
+        display: flex;
+        justify-content: center;
+        gap: 20px; 
+    }
+
+    .social-iconss a {
+        color: black;
+        font-size: 24px;
+        text-decoration: none;
+    }
+
+    .social-iconss a:hover {
+        color: #f44336;
+    }
+
+    @media (max-width: 768px) {
+        .social-icons {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+    </style>
+
+
+<header class="header">
+    <div class="logo">Foodieland</div>
+    <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="./contactus.html">Contact</a></li>
+        <li><a href="./aboutus.html">About Us</a></li>
+    </ul>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</header>
+    
+
+<section style="max-width: 1200px; margin: auto; padding: 40px;">
+    <!-- <h1 style="text-align: center; font-size: 32px; margin-bottom: 20px;">Contact Us</h1> -->
+    <h1 style="text-align: center; font-size: 32px; margin-bottom: 30px; margin-top: 120px;">
+        Contact Us
+    </h1>
+    
+     
+    
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px; 
+                flex-direction: row; max-width: 100%;">
+
+        <img src="./img/Group 13936.png" alt="Contact Image" 
+             style="width: 45%; max-width: 400px; height: auto; object-fit: contain; 
+                    min-width: 280px; margin-top: 100px; /* Push Image Below Navbar */">
+
+       
+        <form style="width: 50%; min-width: 350px; display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <input type="text" placeholder="Name" style="flex: 1; padding: 12px; border: 1px solid #ccc; font-size: 16px;">
+                <input type="email" placeholder="Email Address" style="flex: 1; padding: 12px; border: 1px solid #ccc; font-size: 16px;">
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                <input type="text" placeholder="Subject" style="flex: 1; padding: 12px; border: 1px solid #ccc; font-size: 16px;">
+            
+                <select style="flex: 1; padding: 12px; border: 1px solid #ccc; font-size: 16px;">
+                    <option value="">Select Enquiry Type</option>
+                    <option value="general">Advertising</option>
+                    <option value="support">Support Request</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </div>
+
+            <textarea placeholder="Message" 
+                      style="width: 100%; padding: 12px; border: 1px solid #ccc; font-size: 16px; min-height: 120px;"></textarea>
+
+            <button type="submit" 
+                    style="padding: 12px; background-color: black; color: white; border: none; cursor: pointer; font-size: 18px;">
+                Submit
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="subscribe-box">
+    <h1 style="font-weight: bold;">Deliciousness to Your Inbox</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis reiciendis excepturi sint nostrum eaque tenetur ipsam magnam dignissimos sunt odio quibusdam eveniet, aliquid asperiores, perferendis aliquam adipisci placeat consequatur.</p>
+    <div class="content">
+        <img src="./img/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png" alt="Salad">
+        <div class="input-box">
+            <input type="text" placeholder="Your email address">
+            <button>Subscribe</button>
+        </div>
+        <img src="./img/Photo.png" alt="Food">
+    </div>
+</section>
+
+<section style="margin-top: 40px;" class="recipe-section">
+    <h2>Check out the delicious recipe</h2>
+    <!-- <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labet dolore magna aliqua enim ad minim.</h3> -->
+    <div style="display: flex; gap: 10px; justify-content: center;">
+        <img src="./img/Group 866.png" alt="Recipe Image 1" style="width: 22%; object-fit: cover;">
+        <img src="./img/Group 867.png" alt="Recipe Image 2" style="width: 22%; object-fit: cover;">
+        <img src="./img/Group 868.png" alt="Recipe Image 2" style="width: 22%; object-fit: cover;">
+        <img src="./img/Group 869.png" alt="Recipe Image 2" style="width: 22%; object-fit: cover;">
+    </div>
+</section>
+
+
+<section style="margin-top: 70px;">
+    <div class="content">
+        <div class="text-container">
+            <h1>Foodieland</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+</section>
+
+
+
+<footer>
+    <p>© 2020 Flowbase. Powered by Webflow</p>
+    <div class="social-iconss">
+        <a href="#" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>  
+        </a>
+        <a href="#" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i> 
+        </a>
+        <a href="#" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i> 
+        </a>
+    </div>
+</footer>
+
+
+</body>
+</html>
